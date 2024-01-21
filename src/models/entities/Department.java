@@ -13,8 +13,8 @@ public class Department implements Serializable {
 	}
 	
 	public Department(Integer id, String name) {
-		id = id;
-		name = name;
+		this.id = id;
+		this.name = name;
 	}
 
 	public Integer getId() {
@@ -22,7 +22,7 @@ public class Department implements Serializable {
 	}
 
 	public void setId(Integer id) {
-		id = id;
+		this.id = id;
 	}
 
 	public String getName() {
@@ -30,7 +30,11 @@ public class Department implements Serializable {
 	}
 
 	public void setName(String name) {
-		name = name;
+		this.name = name;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 	@Override
@@ -52,8 +56,12 @@ public class Department implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Department [Id=" + id + ", Name=" + name + "]";
+		return "Department [id=" + id + ", name=" + name + "]";
 	}
+	
+	
+	
+	
 	
 	
 	
