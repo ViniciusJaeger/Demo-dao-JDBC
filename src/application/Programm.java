@@ -46,6 +46,12 @@ public class Programm {
 		seller.setName("Ronaldinho Gaúcho");
 		sellerDao.update(seller);
 		System.out.println("Updated!");
+		
+		System.out.println(" ");
+		
+		Integer id = 2;
+		sellerDao.deleteById(id);
+		System.out.println("Delete completed!");
 	
 
 	}
