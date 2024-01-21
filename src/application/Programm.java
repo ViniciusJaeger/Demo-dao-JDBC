@@ -21,10 +21,16 @@ public class Programm {
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
 		Seller seller = sellerDao.findById(3);
-		System.out.println(seller);
+		System.out.println(seller + "\n");
 		Department dep = new Department(2, null);
-		List<Seller> seller2 = sellerDao.findByDepartment(dep);
-		for(Seller seller3 : seller2) {
+		
+		List<Seller> listSeller = sellerDao.findByDepartment(dep);
+		for(Seller seller3 : listSeller) {
+			System.out.println(seller3 + "\n");
+		}
+		
+		listSeller = sellerDao.findAll();
+		for(Seller seller3 : listSeller) {
 			System.out.println(seller3);
 		}
 	
