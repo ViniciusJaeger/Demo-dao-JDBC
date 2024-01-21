@@ -33,6 +33,12 @@ public class Programm {
 		for(Seller seller3 : listSeller) {
 			System.out.println(seller3);
 		}
+		
+		System.out.println(" ");
+		
+		Seller newSeller = new Seller(null, "Mario", "mario@gmail.com", new Date(), 3000.0, dep);
+		sellerDao.insert(newSeller);
+		System.out.println("Inserted! New id = " + newSeller.getId());
 	
 
 	}
