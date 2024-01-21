@@ -6,36 +6,36 @@ import java.util.Objects;
 public class Department implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	private Integer Id;
-	private String Name;
+	private Integer id;
+	private String name;
 	
 	public Department() {
 	}
 	
 	public Department(Integer id, String name) {
-		Id = id;
-		Name = name;
+		id = id;
+		name = name;
 	}
 
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(Integer id) {
-		Id = id;
+		id = id;
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		name = name;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(Id);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -47,12 +47,12 @@ public class Department implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Department other = (Department) obj;
-		return Objects.equals(Id, other.Id);
+		return Objects.equals(id, other.id);
 	}
 
 	@Override
 	public String toString() {
-		return "Department [Id=" + Id + ", Name=" + Name + "]";
+		return "Department [Id=" + id + ", Name=" + name + "]";
 	}
 	
 	
